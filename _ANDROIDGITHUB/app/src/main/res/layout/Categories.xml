@@ -7,7 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Categories"
     android:background="#57A6DD">
 
     <!--<activity android:name=".MyActivity"
@@ -35,11 +35,7 @@
         android:gravity="center"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
-        android:text="This app gives you a handy tool for creating and sharing lists, either with yourself or with anyone you choose!
-\n\n\n
-Have a household shopping list? To-dos for the kids? Vacation planning checklist? Giant list of mods to download for your favorite game? Writing ideas?
-\n\n\n
-We can help with that."
+        android:text="Categories"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#FFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -117,7 +113,6 @@ We can help with that."
 
     <RelativeLayout
         android:clickable="true"
-        android:id="@+id/GuestSignInButton"
         android:layout_width="250dp"
         android:layout_height="71dp"
         android:background="#F79934"
