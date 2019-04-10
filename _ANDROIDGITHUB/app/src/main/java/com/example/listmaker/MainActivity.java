@@ -1,13 +1,14 @@
 package com.example.listmaker;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
-    RelativeLayout GuestSignInButton = (RelativeLayout) findViewById(R.id.GuestSignInButton);
 
 
     @Override
@@ -19,5 +20,10 @@ public class MainActivity extends AppCompatActivity {
         //ab.setLogo();//for setting logo on the action bar
         //ab.setDisplayUseLogoEnabled(true);//displays logo
         ab.setDisplayShowHomeEnabled(true);
+    }
+
+    public void goToCategories(View view)
+    {
+        startActivity(new Intent(MainActivity.this, Category.class));
     }
 }
