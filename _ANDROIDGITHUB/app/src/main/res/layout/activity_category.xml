@@ -14,36 +14,72 @@
         android:icon="@drawable/my_icon"
         android:label="Home" />-->
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Welcome to ListMaker!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037"
 
-        android:textColor="#FFF"/>
+        android:paddingTop="24dp"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:text="Categories"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#FFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168" />
+        android:paddingBottom="24dp"
+
+       >
+
+        <TextView
+            android:id="@+id/searchbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+
+            android:background="@android:color/darker_gray"
+
+            android:paddingLeft="125dp"
+            android:paddingTop="15dp"
+            android:paddingRight="125dp"
+            android:paddingBottom="15dp"
+
+            android:text="Searchbar"
+
+
+            />
+
+
+        <TextView
+            android:id="@+id/MostRecent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+
+            android:layout_below="@id/searchbar"
+            android:layout_alignLeft="@id/searchbar"
+
+
+            android:text="Most Recent:\n(1 day ago)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FFF"
+
+            android:layout_marginTop="16dp"
+
+            />
+
+
+        <Button
+            android:id="@+id/mostRecentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/searchbar"
+            android:layout_alignRight="@id/searchbar"
+            android:layout_alignBottom="@id/MostRecent"
+
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/MostRecent"
+
+            />
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -128,7 +164,7 @@
                 android:layout_height="match_parent"
 
                 android:alpha="0"
-                android:onClick="goToCategories"
+
                 />
 
             <TextView

@@ -1,166 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#57A6DD">
+    android:background="#57A6DD"
+    tools:context=".MainActivity">
 
     <!--<activity android:name=".MyActivity"
         android:icon="@drawable/my_icon"
         android:label="Home" />-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Welcome to ListMaker!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-        android:textColor="#FFF"/>
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:text="This app gives you a handy tool for creating and sharing lists, either with yourself or with anyone you choose!
+            <LinearLayout
+                android:id="@+id/TextLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_marginTop="32dp"
+
+                    android:text="Welcome to ListMaker!"
+
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="24dp"
+                    android:text="This app gives you a handy tool for creating and sharing lists, either with yourself or with anyone you choose!
 \n\n\n
 Have a household shopping list? To-dos for the kids? Vacation planning checklist? Giant list of mods to download for your favorite game? Writing ideas?
 \n\n\n
 We can help with that."
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#FFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168" />
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginTop="425dp"
-    android:layout_marginBottom="20dp"
-    android:gravity="center">
-
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="71dp"
-        android:background="#F79934"
-        android:layout_weight="1"
-        tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="444dp"
-        android:layout_marginBottom="16dp"
-
-        android:textColor="@android:color/white"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:text="Sign In"
-
-        android:drawableRight="@drawable/ic_sign_in"
-        android:drawablePadding="-30dp"
-        android:paddingRight="20dp"
-        />
 
 
+                    android:textAlignment="center"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#FFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ButtonLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_below="@id/TextLinearLayout"
+
+                android:layout_weight="1"
+
+                android:gravity="center"
+
+                android:orientation="vertical"
+
+                android:paddingTop="32dp"
+                android:paddingBottom="32dp">
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="64dp"
+
+                    android:layout_marginBottom="16dp"
+
+                    android:layout_weight="1"
+
+                    android:background="#F79934"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/ic_sign_in"
 
 
-    <RelativeLayout
-        android:clickable="true"
-        android:layout_width="250dp"
-        android:layout_height="71dp"
-        android:background="#F79934"
-        android:layout_weight="1"
-        tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="444dp"
-        android:layout_marginBottom="16dp"
-        >
+                        android:drawablePadding="-30dp"
 
-        <TextView
-            android:id="@+id/Register_TopText"
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:textAlignment="center"
-            android:layout_centerVertical="true"
-            android:text="Create Account"
-            android:layout_marginBottom="40dp"
+                        android:gravity="center_vertical"
+                        android:paddingRight="20dp"
+
+                        android:text="Sign In"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white" />
 
 
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@android:color/white"></TextView>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="Share lists across devices"
-            android:layout_below="@id/Register_TopText"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="-50dp"
 
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@android:color/white"></TextView>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:background="#F79934"
+                    android:clickable="true"
+                    tools:layout_editor_absoluteX="122dp"
+                    tools:layout_editor_absoluteY="444dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Register_TopText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_weight="2"
+                            android:text="Create Account"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+
+
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/white"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Guest_TopText"
+                            android:layout_marginBottom="16dp"
+                            android:layout_weight="2"
+
+                            android:text="share lists with others"
+
+
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@android:color/white"></TextView>
+                    </LinearLayout>
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/Register_TopText"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginBottom="40dp"-->
+                    <!--android:text="Create Account"-->
+                    <!--android:textAlignment="center"-->
+
+
+                    <!--android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+                    <!--android:textColor="@android:color/white"></TextView>-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/Register_TopText"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="-50dp"-->
+                    <!--android:text="Share lists across devices"-->
+                    <!--android:textAlignment="center"-->
+
+                    <!--android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+                    <!--android:textColor="@android:color/white"></TextView>-->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/guest_sign_in_button"
+                    android:layout_width="250dp"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:background="#F79934"
+                    tools:layout_editor_absoluteX="122dp"
+                    tools:layout_editor_absoluteY="444dp">
+
+                    <Button
+                        android:id="@+id/guest_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:alpha="0"
+                        android:onClick="goToCategories" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Guest_TopText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_weight="2"
+
+                            android:text="Sign in as Guest"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/white"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Guest_TopText"
+                            android:layout_marginBottom="16dp"
+                            android:layout_weight="2"
+                            android:text="Lists stay on this device"
+
+
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@android:color/white"></TextView>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
     </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/guest_sign_in_button"
-        android:layout_width="250dp"
-        android:layout_height="71dp"
-        android:layout_marginBottom="16dp"
-        android:layout_weight="1"
-        android:background="#F79934"
-        android:clickable="true"
-        tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="444dp">
-
-        <Button
-            android:id="@+id/guest_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:alpha="0"
-            android:onClick="goToCategories"
-            />
-
-        <TextView
-            android:id="@+id/Guest_TopText"
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_centerVertical="true"
-            android:layout_marginBottom="40dp"
-            android:text="Sign in as Guest"
-            android:textAlignment="center"
-
-
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@android:color/white"></TextView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Guest_TopText"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="-50dp"
-            android:text="Lists are limited to this device"
-            android:textAlignment="center"
-
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@android:color/white"></TextView>
-    </RelativeLayout>
-
-    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
