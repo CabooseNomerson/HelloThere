@@ -7,192 +7,247 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Category"
-    android:background="#57A6DD">
+    android:background="#57A6DD"
+    tools:context=".Category">
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/my_toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:elevation="4dp"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+        <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+        <!--/>-->
+
 
     <!--<activity android:name=".MyActivity"
         android:icon="@drawable/my_icon"
         android:label="Home" />-->
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
 
-        android:paddingTop="24dp"
-
-        android:paddingBottom="24dp"
-
-       >
-
-        <TextView
-            android:id="@+id/searchbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_centerHorizontal="true"
-
-            android:background="@android:color/darker_gray"
-
-            android:paddingLeft="125dp"
-            android:paddingTop="15dp"
-            android:paddingRight="125dp"
-            android:paddingBottom="15dp"
-
-            android:text="Searchbar"
-
-
-            />
-
-
-        <TextView
-            android:id="@+id/MostRecent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_centerHorizontal="true"
-
-            android:layout_below="@id/searchbar"
-            android:layout_alignLeft="@id/searchbar"
-
-
-            android:text="Most Recent:\n(1 day ago)"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#FFF"
-
-            android:layout_marginTop="16dp"
-
-            />
-
-
-        <Button
-            android:id="@+id/mostRecentButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@id/searchbar"
-            android:layout_alignRight="@id/searchbar"
-            android:layout_alignBottom="@id/MostRecent"
-
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_toRightOf="@id/MostRecent"
-
-            />
-
-    </RelativeLayout>
-
+    <!-- Content Start -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="425dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center">
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="71dp"
-            android:background="#F79934"
-            android:layout_weight="1"
-            tools:layout_editor_absoluteX="122dp"
-            tools:layout_editor_absoluteY="444dp"
-            android:layout_marginBottom="16dp"
+        android:orientation="vertical">
 
-            android:textColor="@android:color/white"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:text="Sign In"
-
-            android:drawableRight="@drawable/ic_sign_in"
-            android:drawablePadding="-30dp"
-            android:paddingRight="20dp"
-            />
-
-
-
-
+        <!-- Start Header -->
         <RelativeLayout
-            android:clickable="true"
-            android:layout_width="250dp"
-            android:layout_height="71dp"
-            android:background="#F79934"
-            android:layout_weight="1"
-            tools:layout_editor_absoluteX="122dp"
-            tools:layout_editor_absoluteY="444dp"
-            android:layout_marginBottom="16dp"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingTop="24dp"
+
+            android:paddingBottom="8dp"
+
             >
 
             <TextView
-                android:id="@+id/Register_TopText"
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:textAlignment="center"
-                android:layout_centerVertical="true"
-                android:text="Create Account"
-                android:layout_marginBottom="40dp"
-
-
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@android:color/white"></TextView>
-
-            <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/searchbar"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="Share lists across devices"
-                android:layout_below="@id/Register_TopText"
+
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="-50dp"
 
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@android:color/white"></TextView>
-        </RelativeLayout>
+                android:background="@android:color/darker_gray"
 
-        <RelativeLayout
-            android:id="@+id/guest_sign_in_button"
-            android:layout_width="250dp"
-            android:layout_height="71dp"
-            android:layout_marginBottom="16dp"
-            android:layout_weight="1"
-            android:background="#F79934"
-            android:clickable="true"
-            tools:layout_editor_absoluteX="122dp"
-            tools:layout_editor_absoluteY="444dp">
+                android:paddingLeft="160dp"
+                android:paddingTop="15dp"
+                android:paddingRight="160dp"
+                android:paddingBottom="15dp"
 
-            <Button
-                android:id="@+id/guest_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:text="Searchbar"
 
-                android:alpha="0"
 
                 />
 
+
             <TextView
-                android:id="@+id/Guest_TopText"
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:layout_centerVertical="true"
-                android:layout_marginBottom="40dp"
-                android:text="Sign in as Guest"
+                android:id="@+id/MostRecent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/searchbar"
+
+                android:layout_alignLeft="@id/searchbar"
+                android:layout_marginTop="16dp"
+
+
+                android:text="Most Recent:\n(1 day ago)"
                 android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                android:textColor="#FFF"
+
+                />
+
+            <!-- Most Recent Button -->
+            <Button
+                android:id="@+id/mostRecentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/searchbar"
+                android:layout_alignRight="@id/searchbar"
+                android:layout_alignBottom="@id/MostRecent"
+
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/MostRecent"
+
+                android:background="#F79934"
 
 
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@android:color/white"></TextView>
+                android:text="Shopping List"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/white"
+                />
 
-            <TextView
+        </RelativeLayout>
+        <!-- End Header -->
+
+
+
+
+        <!-- Horizontal Rule-->
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_margin="16dp"
+
+            android:background="@android:color/white" />
+        <!-- Horizontal Rule-->
+
+
+
+
+        <!-- Buttons Layout -->
+        <LinearLayout
+            android:id="@+id/ButtonLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginLeft="16dp"
+
+            android:layout_marginTop="8dp"
+
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="24dp"
+
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <!-- Shopping Button -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/Guest_TopText"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="-50dp"
-                android:text="Lists are limited to this device"
-                android:textAlignment="center"
 
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@android:color/white"></TextView>
-        </RelativeLayout>
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#F79934"
+
+                    android:padding="20dp"
+                    android:text="Shopping List"
+                    android:textAlignment="center"
+
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                    android:textColor="@android:color/white"
+
+                    android:drawableRight="@drawable/ic_pin"
+                    />
+
+            </LinearLayout>
+            <!-- End Shopping Button -->
+
+
+            <!-- Shopping Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#F79934"
+
+                    android:padding="20dp"
+
+                    android:text="To-do List"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@android:color/white"
+
+                    android:drawableRight="@drawable/ic_pin"
+
+                    />
+            </LinearLayout>
+            <!-- End Shopping Button -->
+
+            <!-- New List 2 Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#F79934"
+
+                    android:padding="20dp"
+                    android:text="Dream Notes"
+                    android:textAlignment="center"
+
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                    android:textColor="@android:color/white"
+
+                    android:drawableRight="@drawable/ic_pin"
+                    android:drawableTint="@android:color/darker_gray"
+                    />
+            </LinearLayout>
+            <!-- End New List 2 Button -->
+
+
+        </LinearLayout>
+        <!-- End Button List -->
+
+        <!-- Grid view test for rows -->
+        <!--<GridView xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:id="@+id/myGrid"-->
+        <!---->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="10dp"-->
+        <!--android:verticalSpacing="10dp"-->
+
+        <!--android:horizontalSpacing="10dp"-->
+        <!--android:numColumns="2"-->
+        <!--android:columnWidth="60dp"-->
+        <!--android:stretchMode="columnWidth"-->
+
+        <!--android:gravity="center"-->
+        <!--/>-->
+
 
     </LinearLayout>
+    <!-- Content Ending Tag -->
 
-</android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout><!-- Document Ending Tag -->
